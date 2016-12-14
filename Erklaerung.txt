@@ -1,0 +1,17 @@
+
+
+Kurze Erklärung:
+
+Die Prototypen, die wir an der Präsentation gezeigt haben waren:
+
+App: test2.xml 
+Erweiterung (App am rechten Rand): test2Erweiterung.xml
+
+
+Bei unserem letzten Meeting ist folgende App entstanden: 
+MusterAppBubblesReinfliegen.xml
+
+Alle anderen xml files sind Zwischenschritte bzw die Muster von Google siehe:
+
+
+https://developers.google.com/+/hangouts/getting-started
