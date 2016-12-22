@@ -17,4 +17,4 @@ Alle anderen xml files sind Zwischenschritte bzw die Muster von Google siehe:
 https://developers.google.com/+/hangouts/getting-started
 
 
-tut bei Lisa tun!!!!
+tut bei Lisa tun!!!! markus auch tun eigner branch 
