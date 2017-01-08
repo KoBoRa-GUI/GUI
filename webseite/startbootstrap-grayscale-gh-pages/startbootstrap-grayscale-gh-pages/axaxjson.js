@@ -13,8 +13,7 @@ function sndReq(){
 function handleResponse(){
     var daten = null;
     if(resOb.readyState == 4){
-        daten = JSON.parse(resOb.responseText);
-        document.getElementById("innerBubbleContainer").innerHTML = document.getElementById("innerBubbleContainer").innerHTML + daten;
+        drawBubble(daten);
     }
 }
 
@@ -25,6 +24,32 @@ function out(){
     }
     
 }
+
+function drawBubble(daten){
+
+    daten = JSON.parse(resOb.responseText);
+    var datenString= daten.substring(1,daten.length -1);
+
+    var datenBubble = datenString.split(",");    
+
+    var name = datenBubble[0].substring(9,datenBubble[0].length -1);
+    var prio = datenBubble[1].substring(8);
+    var link = datenBubble[2].substring(9,datenBubble[2].length -1);
+
+    var size = 100 * prio;
+
+    var bubble= '<div style="width: '+size+'; heigh: '+size+'; background-color:red;  border-radius: 360px; margin: 1%; "> <a href="'+link+'" target="_blank">'+ name +' </a> </div>';
+
+
+    document.getElementById("innerBubbleContainer").innerHTML = document.getElementById("innerBubbleContainer").innerHTML + bubble;
+
+
+}
+
+
+
+
+
 var myInterval;
 
 function starteAnwenderung(){
