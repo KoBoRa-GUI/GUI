@@ -1,0 +1,24 @@
+
+.bubbleContainer{
+    height: 500px;
+}
+
+#bubbleContainer{
+    border: 1px solid black;
+    width: 1000px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+#innerBubbleContainer{
+    width: 2000px;
+    
+}
+
+#kobora{
+  background-color:white; 
+  color: black;
+}
+#bubbleContainer{
+      margin-left: -120px;
+}
