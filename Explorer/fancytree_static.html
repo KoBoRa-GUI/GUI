@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>Fancytree - Example</title>
+
+  <script src="src/jquery.min.js"></script>
+  <script src="src/jquery-ui.custom.js"></script>
+
+  <link href="src/skin-win8/ui.fancytree.css" rel="stylesheet">
+  <script src="src/jquery.fancytree.js"></script>
+
+  <!-- (Irrelevant source removed.) -->
+
+<script type="text/javascript">
+$(function(){
+  // Initialize the tree inside the <div>element.
+  // The tree structure is read from the contained <ul> tag.
+  $("#tree").fancytree({
+    checkbox: true,
+    activeVisible: true, // Make sure, active nodes are visible (expanded)
+    aria: false, // Enable WAI-ARIA support
+    autoActivate: true, // Automatically activate a node when it is focused using keyboard
+    autoCollapse: false, // Automatically collapse all siblings, when a node is expanded
+    autoScroll: true, // Automatically scroll nodes into visible area
+    clickFolderMode: 4, // 1:activate, 2:expand, 3:activate and expand, 4:activate (dblclick expands)
+    checkbox: false, // Show checkboxes
+    debugLevel: 2, // 0:quiet, 1:normal, 2:debug
+    disabled: false, // Disable control
+    focusOnSelect: false, // Set focus when node is checked by a mouse click
+    escapeTitles: false, // Escape `node.title` content for display
+    generateIds: false, // Generate id attributes like <span id='fancytree-id-KEY'>
+    idPrefix: "ft_", // Used to generate node id´s like <span id='fancytree-id-<key>'>
+    icon: true, // Display node icons
+    keyboard: true, // Support keyboard navigation
+    keyPathSeparator: "/", // Used by node.getKeyPath() and tree.loadKeyPath()
+    minExpandLevel: 1, // 1: root node is not collapsible
+    quicksearch: false, // Navigate to next node by typing the first letters
+    rtl: false, // Enable RTL (right-to-left) mode
+    selectMode: 2, // 1:single, 2:multi, 3:multi-hier
+    tabindex: "0", // Whole tree behaves as one single control
+    titlesTabbable: false, // Node titles can receive keyboard focus
+    tooltip: true, // Use title as tooltip (also a callback could be specified)
+    activate: function(event, data) {
+      $("#echoActive").text(data.node.title);
+//              alert(node.getKeyPath());
+      if( data.node.url )
+        window.open(data.node.url, data.node.target);
+    },
+    deactivate: function(event, data) {
+      $("#echoSelected").text("-");
+    },
+    focus: function(event, data) {
+      $("#echoFocused").text(data.node.title);
+    },
+    blur: function(event, data) {
+      $("#echoFocused").text("-");
+    },
+    lazyLoad: function(event, data){
+      // Simulate a slow ajax request
+      var dfd = new $.Deferred();
+      data.result = dfd.promise();
+      window.setTimeout(function(){
+        dfd.resolve([
+          { title: "Lazy node 1", lazy: true },
+          { title: "Simple node 2", select: true }
+        ]);
+      }, 1500);
+    }
+  });
+});
+</script>
+
+<!-- (Irrelevant source removed.) -->
+
+</head>
+
+<body class="example">
+
+ <h1>Fancytree API</h1>
+  
+  <div id="tree">
+    <ul>
+      <li>This simple node (and the following) have been created from html.
+      <li id="id1" title="This is item #1">item1 with key and tooltip
+      <li id="id2">item2 with key "id2"
+
+      <li id="id3" class="folder">Standard Folder with some children
+        <ul>
+          <li id="id3.1">Sub-item 3.1
+          <li id="id3.2">Sub-item 3.2
+        </ul>
+
+      <li id="id4">item 4. Note that also non-folders (i.e. 'documents') may have child nodes
+        <ul>
+          <li id="id4.1">Sub-item 4.1
+          <li id="id4.2">Sub-item 4.2
+          <li id="id4.3">Sub-item 4.3
+            <ul>
+              <li id="id4.3.1">Sub-item 4.3.1
+              <li id="id4.3.2">Sub-item 4.3.2
+              <ul>
+                <li id="id4.3.2.1">Sub-item 4.3.2.1
+                <li id="id4.3.2.2">Sub-item 4.3.2.2
+              </ul>
+            </ul>
+          <li id="id4.4">Sub-item 4.4
+        </ul>
+
+      <li id="id5" class="expanded folder">Advanced examples
+        <ul>
+          <li data="key: 'node5.1'">item5.1: Using data attribute as an alternative way to specify a key.
+          <li data="key: 'node5.3', folder: true">item5.1: Using data attribute as an alternative way to specify a folder.
+          <li id="id5.2">Sub-item 5.2
+          <li>Item without a key. Keys are optional (generated automatically), but may be used in the callbacks
+        </ul>
+    </ul>
+  </div>
+
+  <div>Active node: <span id="echoActive">-</span></div>
+  <div>Focused node: <span id="echoFocused">-</span></div>
+  <!-- (Irrelevant source removed.) -->
+</body>
+</html>

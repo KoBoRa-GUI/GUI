@@ -1,0 +1,82 @@
+[
+	{"title": "TGCA - User Experience", "expanded": true, "folder": true, "children": [
+		{"title": "GUI", "folder": true, "children": [
+			{"title": "Präsentation", "folder": true, "children": [
+				{"title": "Zwischenpräsentation"},
+				{"title": "Abschlusspräsentation"}
+			]},
+			{"title": "Anforderungen", "folder": true, "children": [
+				{"title": "Archiv", "folder": true,"children": [
+					{"title": "Checkliste"},
+					{"title": "Anforderungskatalog1"},
+					{"title": "Brainstorming"},
+					{"title": "Workflow"},
+					{"title": "IMG"}					
+				]},
+				{"title": "Quellen", "folder": true,"children": [
+					{"title": "Checkliste"},
+					{"title": "Müller"},
+					{"title": "Schmidt"}
+				]},
+				{"title": "Leitfaden"},
+				{"title": "User Stories Explorer"},
+				{"title": "User Stories Bubbles"}
+				]}
+		]},
+		{"title": "Orga", "expanded": true, "folder": true, "children": [
+			{"title": "Projektmitglieder"}
+		]},
+				{"title": "GUI", "folder": true, "children": [
+			{"title": "Präsentation", "folder": true, "children": [
+				{"title": "Zwischenpräsentation"},
+				{"title": "Abschlusspräsentation"}
+			]},
+			{"title": "Anforderungen", "folder": true, "children": [
+				{"title": "Archiv", "folder": true,"children": [
+					{"title": "Checkliste"},
+					{"title": "Anforderungskatalog1"},
+					{"title": "Brainstorming"},
+					{"title": "Workflow"},
+					{"title": "IMG"}					
+				]},
+				{"title": "Quellen", "folder": true,"children": [
+					{"title": "Checkliste"},
+					{"title": "Müller"},
+					{"title": "Schmidt"}
+				]},
+				{"title": "Leitfaden"},
+				{"title": "User Stories Explorer"},
+				{"title": "User Stories Bubbles"}
+				]}
+		]},
+		{"title": "Orga", "expanded": true, "folder": true, "children": [
+			{"title": "Projektmitglieder"}
+		]},
+			{"title": "GUI", "folder": true, "children": [
+				{"title": "Präsentation", "folder": true, "children": [
+					{"title": "Zwischenpräsentation"},
+					{"title": "Abschlusspräsentation"}
+			]},
+			{"title": "Anforderungen", "folder": true, "children": [
+				{"title": "Archiv", "folder": true,"children": [
+					{"title": "Checkliste"},
+					{"title": "Anforderungskatalog1"},
+					{"title": "Brainstorming"},
+					{"title": "Workflow"},
+					{"title": "IMG"}					
+				]},
+				{"title": "Quellen", "folder": true,"children": [
+					{"title": "Checkliste"},
+					{"title": "Müller"},
+					{"title": "Schmidt"}
+				]},
+				{"title": "Leitfaden"},
+				{"title": "User Stories Explorer"},
+				{"title": "User Stories Bubbles"}
+				]}
+		]},
+		{"title": "Orga", "expanded": true, "folder": true, "children": [
+			{"title": "Projektmitglieder"}
+		]}
+	]}
+]
