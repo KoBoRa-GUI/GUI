@@ -27,7 +27,7 @@ $linkarray = array (
 		);
 
 
-$randomMumber= rand(1, 4);
+$randomMumber= rand(1, 9);
 
 $line_chart_data =  '{ "name":"'.$namearray[$randomMumber].'", "prio": '.rand(1, 10).', "link":"'.$linkarray[$randomMumber].' "}';
 $line_chart_data = json_encode($line_chart_data);
