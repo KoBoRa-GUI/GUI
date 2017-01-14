@@ -24,6 +24,7 @@
 }
 .linkinLinklist{
    margin-right: 10px; 
+   color: white;
 }
 
 #bubbleContainer{
@@ -62,7 +63,7 @@
    position: relative;
 top: 40%;
 color: white !important;
-background-color: black;
+
 margin-left: -30%;
 }
 

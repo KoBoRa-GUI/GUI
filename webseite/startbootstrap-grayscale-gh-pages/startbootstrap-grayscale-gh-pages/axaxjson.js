@@ -58,7 +58,7 @@ var date = new Date();
 
 
     //erstelle bubble
-    var bubble= '<div class="coloredBubble" style="width: '+size+'; height: '+size+'; background-color:'+color+'; "> <a id="bubble'+countBubbles+'" class="bubbleLink"  href="'+link+'" target="_blank">'+ name +" " + Stunden+":"+Minuten+""+Vorsek + Sekunden +'number: ' +countBubbles+ ' </a> </div>';
+    var bubble= '<div class="coloredBubble" style="width: '+size+'; height: '+size+'; background-color:'+color+'; "> <a id="bubble'+countBubbles+'" class="bubbleLink"  href="'+link+'" target="_blank">'+ name +" " + Stunden+":"+Minuten+""+Vorsek + Sekunden +' </a> </div>';
        //verlängere den Container
      document.getElementById("innerBubbleContainer").style.width =  document.getElementById("innerBubbleContainer").offsetWidth + size+ 150 +"px";
  
@@ -78,14 +78,10 @@ var date = new Date();
     var elemList = document.getElementById("link"+countBubbles);
 	elemList.scrollIntoView(true);
 
-/*
-if(countBubbles == 100){
-
-       document.getElementById("innerBubbleContainer").innerHTML =  bubble;
-       document.getElementById("innerBubbleContainer").style.width =  1000+"px";
-}
-
-*/
+    //background color der Links ergänzen
+    document.getElementById('link'+countBubbles).style.color = "white";
+    document.getElementById('link'+countBubbles).style.backgroundColor = color;
+    document.getElementById('bubble'+countBubbles).style.backgroundColor = color;
 
 }
 
