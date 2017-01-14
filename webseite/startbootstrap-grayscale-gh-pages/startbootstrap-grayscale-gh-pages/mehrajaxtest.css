@@ -4,7 +4,7 @@
     height: 100%;
      width: 200px;
 
-  /*  border: 1px solid green;  */
+  /* border: 1px solid green;  */
     float: left;
 
 
@@ -13,7 +13,7 @@
 }
 
 .bubbleContainer{
-    height: 350px;
+    height: 400px;
        float: left;
 }
 #linkliste{
@@ -56,7 +56,7 @@
      text-align:center;
      margin-left: 30%;
 
-     margin-top: 30%;
+    /* margin-top: 30%; */
 
 }
 .bubbleLink{

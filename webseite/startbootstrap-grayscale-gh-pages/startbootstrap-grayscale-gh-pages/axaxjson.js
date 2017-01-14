@@ -25,6 +25,8 @@ function out(){
     
 }
 var countBubbles = 0;
+var bubbleIDarray = new Array();
+
 
 function drawBubble(daten){
 
@@ -58,7 +60,7 @@ var date = new Date();
 
 
     //erstelle bubble
-    var bubble= '<div class="coloredBubble" style="width: '+size+'; height: '+size+'; background-color:'+color+'; "> <a id="bubble'+countBubbles+'" class="bubbleLink"  href="'+link+'" target="_blank">'+ name +" " + Stunden+":"+Minuten+""+Vorsek + Sekunden +' </a> </div>';
+    var bubble= '<div class="coloredBubble" id="coloredBubble'+countBubbles+'" style="width: '+size+'; height: '+size+'; background-color:'+color+'; "> <a id="bubble'+countBubbles+'" class="bubbleLink"  href="'+link+'" target="_blank">'+ name +" " + Stunden+":"+Minuten+""+Vorsek + Sekunden +' </a> </div>';
        //verlängere den Container
      document.getElementById("innerBubbleContainer").style.width =  document.getElementById("innerBubbleContainer").offsetWidth + size+ 150 +"px";
  
@@ -79,10 +81,35 @@ var date = new Date();
 	elemList.scrollIntoView(true);
 
     //background color der Links ergänzen
+    var randomPadding = Math.random(1,50)*100 +'%';
     document.getElementById('link'+countBubbles).style.color = "white";
     document.getElementById('link'+countBubbles).style.backgroundColor = color;
     document.getElementById('bubble'+countBubbles).style.backgroundColor = color;
+  //  document.getElementById('coloredBubble'+countBubbles).style.backgroundColor = "black";
+     document.getElementById('coloredBubble'+countBubbles).style.marginTop = randomPadding ;
 
+
+   // bubbleIDarray.push([countBubbles, name, link] );
+
+     setMousoverToBubble('coloredBubble'+countBubbles, name );
+}
+
+
+function setMousoverToBubble(bubbleName, name){
+           // alert("erstes: " +bubbleIDarray[0][0]);
+
+  //  for(var i = 0; i< bubbleIDarray.length; i++ ){
+
+     //   alert(bubbleIDarray[i]);
+    
+      //   window.document.getElementById('coloredBubble'+bubbleIDarray[i][0]).onmouseover = function(){
+    //      alert("zahl: "+ i );// bubbleIDarray[i][1]);
+    //  }
+   // }
+
+     window.document.getElementById(bubbleName).onmouseover = function(){
+        alert(name);
+      }
 }
 
 
@@ -114,6 +141,15 @@ function init(){
        window.document.getElementById("stopButton").onclick = function(){
           stoppeAnwenderung();
       }
+         window.document.getElementById("bubbleContainer").onmouseover = function(){
+          stoppeAnwenderung();
+      }
+      window.document.getElementById("bubbleContainer").onmouseleave = function(){
+          starteAnwenderung();
+      }
+
+
+
       /* getElementById("innerBubbleContainer").onmouseover = function(){
             sndReq(0);
         }   
