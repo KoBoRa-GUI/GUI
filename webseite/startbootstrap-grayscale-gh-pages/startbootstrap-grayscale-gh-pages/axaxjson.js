@@ -25,6 +25,8 @@ function out(){
     
 }
 var countBubbles = 0;
+var bubbleIDarray = new Array();
+
 
 function drawBubble(daten){
 
@@ -86,25 +88,32 @@ var date = new Date();
   //  document.getElementById('coloredBubble'+countBubbles).style.backgroundColor = "black";
      document.getElementById('coloredBubble'+countBubbles).style.marginTop = randomPadding ;
 
-  setMousoverToBubble('coloredBubble'+countBubbles);
-    
+
+   // bubbleIDarray.push([countBubbles, name, link] );
+
+     setMousoverToBubble('coloredBubble'+countBubbles, name );
 }
 
 
-function setMousoverToBubble(bubbleName){
+function setMousoverToBubble(bubbleName, name){
+           // alert("erstes: " +bubbleIDarray[0][0]);
 
+  //  for(var i = 0; i< bubbleIDarray.length; i++ ){
 
-    window.document.getElementById(bubbleName).onmouseover = function(){
-          alert("info");
+     //   alert(bubbleIDarray[i]);
+    
+      //   window.document.getElementById('coloredBubble'+bubbleIDarray[i][0]).onmouseover = function(){
+    //      alert("zahl: "+ i );// bubbleIDarray[i][1]);
+    //  }
+   // }
+
+     window.document.getElementById(bubbleName).onmouseover = function(){
+        alert(name);
       }
 }
 
 
 
-function test(){
-
-    
-}
 
 
 var myInterval;
