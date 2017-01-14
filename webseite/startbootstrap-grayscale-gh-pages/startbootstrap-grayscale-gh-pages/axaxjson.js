@@ -24,6 +24,7 @@ function out(){
     }
     
 }
+var countBubbles = 0;
 
 function drawBubble(daten){
 
@@ -48,19 +49,43 @@ var date = new Date();
   var Minuten = date.getMinutes();
   var Sekunden = date.getSeconds();
    var Vorsek = (Sekunden < 10) ? ":0" : ":";
+   countBubbles++;
+
+    //erstelle bubbleRoom
+
+    var bubbleRoom = '<div class="bubbleRoom" id="bubbleRoom'+countBubbles +'" "> </div>';  
+  //  var bubbleRoom = '<p> test </p>';
+
 
     //erstelle bubble
-    var bubble= '<div class="coloredBubble" style="width: '+size+'; height: '+size+'; background-color:'+color+'; "> <a class="bubbleLink"  href="'+link+'" target="_blank">'+ name +" " + Stunden+":"+Minuten+""+Vorsek + Sekunden +' </a> </div>';
-        //verlängere den Container
+    var bubble= '<div class="coloredBubble" style="width: '+size+'; height: '+size+'; background-color:'+color+'; "> <a id="bubble'+countBubbles+'" class="bubbleLink"  href="'+link+'" target="_blank">'+ name +" " + Stunden+":"+Minuten+""+Vorsek + Sekunden +'number: ' +countBubbles+ ' </a> </div>';
+       //verlängere den Container
      document.getElementById("innerBubbleContainer").style.width =  document.getElementById("innerBubbleContainer").offsetWidth + size+ 150 +"px";
  
-    // füge Bubble Container hinzu
-    document.getElementById("innerBubbleContainer").innerHTML = document.getElementById("innerBubbleContainer").innerHTML + bubble;
+     //füge bubbleRoom hinzu 
+    document.getElementById("innerBubbleContainer").innerHTML = document.getElementById("innerBubbleContainer").innerHTML + bubbleRoom;
+    // füge Bubble dem Container hinzu
+    document.getElementById('bubbleRoom'+countBubbles ).innerHTML =  bubble;
     // füge Link zu Liste hinzu
-    document.getElementById("linkliste").innerHTML =  document.getElementById("linkliste").innerHTML + '<h4><a class="linkinLinklist" href="'+link+'" target="_blank">'+ name +" " + Stunden+":"+Minuten+""+Vorsek + Sekunden +' </a></h4>';
+    document.getElementById("linkliste").innerHTML =  document.getElementById("linkliste").innerHTML + '<h4 id=link'+countBubbles+ '><a class="linkinLinklist" href="'+link+'" target="_blank">'+ name +" " + Stunden+":"+Minuten+""+Vorsek + Sekunden +' </a></h4>';
 
+    //autoscroll des Bubblecontainers
+    var elemBubble = document.getElementById("bubble"+countBubbles);
+	elemBubble.scrollIntoView(true);
 
+    //autoscroll der Liste
 
+    var elemList = document.getElementById("link"+countBubbles);
+	elemList.scrollIntoView(true);
+
+/*
+if(countBubbles == 100){
+
+       document.getElementById("innerBubbleContainer").innerHTML =  bubble;
+       document.getElementById("innerBubbleContainer").style.width =  1000+"px";
+}
+
+*/
 
 }
 

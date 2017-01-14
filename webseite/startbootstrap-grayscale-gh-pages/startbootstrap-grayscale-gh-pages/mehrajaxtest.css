@@ -1,4 +1,17 @@
 
+.bubbleRoom{
+
+    height: 100%;
+     width: 200px;
+
+  /*  border: 1px solid green;  */
+    float: left;
+
+
+    
+   
+}
+
 .bubbleContainer{
     height: 350px;
        float: left;
@@ -21,7 +34,8 @@
        float: left;
 }
 #innerBubbleContainer{
-    width: 2000px;
+    height: 329px;
+   /* width: 2000px; */
      overflow: visible;
         float: left;
     
@@ -39,7 +53,9 @@
     float: left;
       border-radius: 120px;
      text-align:center;
-     margin-left: 1%;
+     margin-left: 30%;
+
+     margin-top: 30%;
 
 }
 .bubbleLink{
@@ -47,5 +63,6 @@
 top: 40%;
 color: white !important;
 background-color: black;
+margin-left: -30%;
 }
 
