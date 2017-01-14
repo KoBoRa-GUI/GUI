@@ -1,17 +1,29 @@
 
 .bubbleContainer{
-    height: 500px;
+    height: 350px;
+       float: left;
+}
+#linkliste{
+    width: 200px;
+    border: 1px solid black;
+    float: left;
+    overflow-y: auto;
+}
+.linkinLinklist{
+   margin-right: 10px; 
 }
 
 #bubbleContainer{
     border: 1px solid black;
     width: 1000px;
     overflow-x: auto;
-  /*  overflow-y: hidden; */
     white-space: nowrap;
+       float: left;
 }
 #innerBubbleContainer{
     width: 2000px;
+     overflow: visible;
+        float: left;
     
 }
 
@@ -21,4 +33,19 @@
 }
 #bubbleContainer{
       margin-left: -120px;
+     
 }
+.coloredBubble{
+    float: left;
+      border-radius: 120px;
+     text-align:center;
+     margin-left: 1%;
+
+}
+.bubbleLink{
+   position: relative;
+top: 40%;
+color: white !important;
+background-color: black;
+}
+

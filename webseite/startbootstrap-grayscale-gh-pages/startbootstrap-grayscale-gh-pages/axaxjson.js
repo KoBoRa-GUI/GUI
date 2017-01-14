@@ -33,15 +33,33 @@ function drawBubble(daten){
     var datenBubble = datenString.split(",");    
 
     var name = datenBubble[0].substring(9,datenBubble[0].length -1);
-    var prio = datenBubble[1].substring(8);
-    var link = datenBubble[2].substring(9,datenBubble[2].length -1);
+   
+   var prio = datenBubble[1].substring(8);
 
-    var size = 100 * prio;
+    var color = datenBubble[2].substring(10);
 
-    var bubble= '<div style="width: '+size+'; heigh: '+size+'; background-color:red;  border-radius: 360px; margin: 1%; "> <a href="'+link+'" target="_blank">'+ name +' </a> </div>';
+     var link = datenBubble[3].substring(9,datenBubble[3].length -1);
 
+//alert(link);
+    var size = 15 * prio +20;
 
+var date = new Date();
+    var Stunden = date.getHours();
+  var Minuten = date.getMinutes();
+  var Sekunden = date.getSeconds();
+   var Vorsek = (Sekunden < 10) ? ":0" : ":";
+
+    //erstelle bubble
+    var bubble= '<div class="coloredBubble" style="width: '+size+'; height: '+size+'; background-color:'+color+'; "> <a class="bubbleLink"  href="'+link+'" target="_blank">'+ name +" " + Stunden+":"+Minuten+""+Vorsek + Sekunden +' </a> </div>';
+        //verlängere den Container
+     document.getElementById("innerBubbleContainer").style.width =  document.getElementById("innerBubbleContainer").offsetWidth + size+ 150 +"px";
+ 
+    // füge Bubble Container hinzu
     document.getElementById("innerBubbleContainer").innerHTML = document.getElementById("innerBubbleContainer").innerHTML + bubble;
+    // füge Link zu Liste hinzu
+    document.getElementById("linkliste").innerHTML =  document.getElementById("linkliste").innerHTML + '<h4><a class="linkinLinklist" href="'+link+'" target="_blank">'+ name +" " + Stunden+":"+Minuten+""+Vorsek + Sekunden +' </a></h4>';
+
+
 
 
 }
