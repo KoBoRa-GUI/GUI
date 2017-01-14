@@ -1,0 +1,69 @@
+
+.bubbleRoom{
+
+    height: 100%;
+     width: 200px;
+
+  /* border: 1px solid green;  */
+    float: left;
+
+
+    
+   
+}
+
+.bubbleContainer{
+    height: 400px;
+       float: left;
+}
+#linkliste{
+    width: 200px;
+    border: 1px solid black;
+    float: left;
+    overflow-y: auto;
+}
+.linkinLinklist{
+   margin-right: 10px; 
+   color: white;
+}
+
+#bubbleContainer{
+    border: 1px solid black;
+    width: 1000px;
+    overflow-x: auto;
+    white-space: nowrap;
+       float: left;
+}
+#innerBubbleContainer{
+    height: 329px;
+   /* width: 2000px; */
+     overflow: visible;
+        float: left;
+    
+}
+
+#kobora{
+  background-color:white; 
+  color: black;
+}
+#bubbleContainer{
+      margin-left: -120px;
+     
+}
+.coloredBubble{
+    float: left;
+      border-radius: 120px;
+     text-align:center;
+     margin-left: 30%;
+
+    /* margin-top: 30%; */
+
+}
+.bubbleLink{
+   position: relative;
+top: 40%;
+color: white !important;
+
+margin-left: -30%;
+}
+
