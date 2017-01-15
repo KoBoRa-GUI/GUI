@@ -85,140 +85,19 @@ function drawBubble(daten) {
     document.getElementById('link' + countBubbles).style.color = "white";
     document.getElementById('link' + countBubbles).style.backgroundColor = color;
     document.getElementById('bubble' + countBubbles).style.backgroundColor = color;
-    //  document.getElementById('coloredBubble'+countBubbles).style.backgroundColor = "black";
     document.getElementById('coloredBubble' + countBubbles).style.marginTop = randomPadding;
 
 
 
-  /*  IDarray.push(countBubbles);
-    nameArray.push(name);
-    linkArray.push(link);
-*/
-    // bubbleIDarray.push([countBubbles, name, link] );
-
-       setMousoverToBubble(  countBubbles , name, link );
-
-//setMousoverToBubble2();
-}
-
-/*
-function testFunction(){
-
-    alert(nameArray[nameArray.length]);
-}
-
-function setMousoverToBubble2() {
-
-//window.document.getElementById("coloredBubble1").onmouseover =   testFunction;
-
-
-//    alert("id array length: "+ IDarray.length );
-
-    for (var i = 1; i < IDarray.length; i++) {
-       
-window.document.getElementById("coloredBubble"+i ).onmouseover =   testFunction;
-      /*  alert(nameArray[i-1]);
-        window.document.getElementById('coloredBubble' + i).onmouseover = function () {
-
-            alert(nameArray[i-1]);
-        }
-
-
-    }
-
-
-}
-
-*/
 
 
 
-
-var IDarray = new Array();
-var nameArray = new Array();
-var linkArray = new Array();
-
-function setMousoverToBubble(id, name,link) {
-
-//alert(id);
-     IDarray.push(id);
-    nameArray.push(name);
-   linkArray.push(link);
-
- //  alert("länge IDarray: " +IDarray.length);
-   
-
-window.document.getElementById('coloredBubble'+ id).onmouseover = function(){
-
-    alert(name +" und "+link);
-}
-
-
-for(var i = 0; i < nameArray.length; IDarray++){
-
-  
-
-    window.document.getElementById('coloredBubble'+ IDarray[i]).onmouseover = function(){
-
-    alert(nameArray[i] +" ****und**** "+linkArray[i]);
-}
 }
 
 
 
 
 
-
-    /* alert("erstes: " +bubbleIDarray[0][0]);
-     alert("zweites: " +bubbleIDarray[0][1]);
-      alert("drittes: " +bubbleIDarray[0][2]);
-    
-    
-    alert(bubbleIDarray.length);
-    
-    for (var i = 0; i < bubbleIDarray.length; i++) {
-
-        //  alert(bubbleIDarray[i]);
-
-        var countBubbles = bubbleIDarray[i][0];
-        var name = bubbleIDarray[i][1];
-
-        var link = bubbleIDarray[i][2];
-
-        //    alert("vor 2. for länge: " + bubbleIDarray.length);
-
-        for (var x = 0; x < bubbleIDarray.length; x++) {
-
-            //        alert('coloredBubble'+ bubbleIDarray[i][0]);
-            window.document.getElementById('coloredBubble' + bubbleIDarray[i][0]).onmouseover = function () {
-
-                alert(bubbleIDarray[i][1]);
-            }
-            /*  window.document.getElementById('coloredBubble'+bubbleIDarray[i][0]).onmouseover = function(){
-              //alert( name );// bubbleIDarray[i][1]);
-             var number = bubbleIDarray[i].indexOf(bubbleIDarray[i][0]);
-             alert(number);
-           }
-         }
-     
-       //   window.document.getElementById(bubbleName).onmouseover = function(){
-         //    alert(name);
-         //  }
-     /*
-     alert("in set mousseover");
-         for (var i = 0; i < bubbleIDarray.length; i++) {
-         var index = bubbleIDarray[0].indexOf(bubbleIDarray[i][0]);
-         alert("in set mousseover*************** index: "+ index );
-         if (index > -1) {
-           alert [i, index];
-         }
-       }
-     alert("in set mousseoverxxxxxxxxxxxxxxxxxxxxxxxxx");
-   
-        }
-
-    }  */
-}
 
 
 var myInterval;
@@ -228,7 +107,7 @@ function starteAnwenderung() {
 
 
     myInterval = setInterval(sndReq, 3000);
-  //  setMousoverInterval= setInterval(setMousoverToBubble2, 3000);
+
 }
 
 function stoppeAnwenderung() {
