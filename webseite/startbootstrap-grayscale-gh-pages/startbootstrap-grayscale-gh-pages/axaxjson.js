@@ -71,6 +71,10 @@ function drawBubble(daten) {
     // füge Link zu Liste hinzu
     document.getElementById("linkliste").innerHTML = document.getElementById("linkliste").innerHTML + '<h4 id=link' + countBubbles + '><a class="linkinLinklist" href="' + link + '" target="_blank">' + name + " " + Stunden + ":" + Minuten + "" + Vorsek + Sekunden + ' </a></h4>';
 
+
+if(doScroll == 1){
+
+
     //autoscroll des Bubblecontainers
     var elemBubble = document.getElementById("bubble" + countBubbles);
     elemBubble.scrollIntoView(true);
@@ -79,6 +83,8 @@ function drawBubble(daten) {
 
     var elemList = document.getElementById("link" + countBubbles);
     elemList.scrollIntoView(true);
+
+    }
 
     //background color der Links ergänzen
     var randomPadding = Math.random(1, 50) * 100 + '%';
@@ -97,11 +103,11 @@ function drawBubble(daten) {
 
 
 
-
+var doScroll = 1; 
 
 
 var myInterval;
-var setMousoverInterval;
+
 
 function starteAnwenderung() {
 
@@ -114,7 +120,7 @@ function stoppeAnwenderung() {
 
 
     clearInterval(myInterval);
-    clearInterval(setMousoverInterval);
+
 }
 
 
@@ -122,18 +128,16 @@ function init() {
 
 
     window.document.getElementById("content").onmouseover = function () {
-        stoppeAnwenderung();
+       // stoppeAnwenderung();
+        doScroll = 0;
     }
     window.document.getElementById("content").onmouseleave = function () {
         starteAnwenderung();
+        doScroll = 1;
     }
 
 
 
-    /* getElementById("innerBubbleContainer").onmouseover = function(){
-          sndReq(0);
-      }   
-   */
 
 
 
