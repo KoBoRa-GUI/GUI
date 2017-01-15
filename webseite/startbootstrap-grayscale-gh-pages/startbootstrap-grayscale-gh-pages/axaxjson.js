@@ -51,6 +51,7 @@ function drawBubble(daten) {
     var Minuten = date.getMinutes();
     var Sekunden = date.getSeconds();
     var Vorsek = (Sekunden < 10) ? ":0" : ":";
+    var Vormin = (Minuten < 10) ? ":0" : ":";
     countBubbles++;
 
     //erstelle bubbleRoom
@@ -60,7 +61,7 @@ function drawBubble(daten) {
 
 
     //erstelle bubble
-    var bubble = '<div class="coloredBubble" id="coloredBubble' + countBubbles + '" style="width: ' + size + '; height: ' + size + '; background-color:' + color + '; "> <a id="bubble' + countBubbles + '" class="bubbleLink"  href="' + link + '" target="_blank">' + name + " " + Stunden + ":" + Minuten + "" + Vorsek + Sekunden + ' </a> </div>';
+    var bubble = '<div class="coloredBubble" id="coloredBubble' + countBubbles + '" style="width: ' + size + '; height: ' + size + '; background-color:' + color + '; "> <a id="bubble' + countBubbles + '" class="bubbleLink"  href="' + link + '" target="_blank">' + name + ' </a> </div>';
     //verlängere den Container
     document.getElementById("innerBubbleContainer").style.width = document.getElementById("innerBubbleContainer").offsetWidth + size + 150 + "px";
 
@@ -69,7 +70,7 @@ function drawBubble(daten) {
     // füge Bubble dem Container hinzu
     document.getElementById('bubbleRoom' + countBubbles).innerHTML = bubble;
     // füge Link zu Liste hinzu
-    document.getElementById("linkliste").innerHTML = document.getElementById("linkliste").innerHTML + '<h4 id=link' + countBubbles + '><a class="linkinLinklist" href="' + link + '" target="_blank">' + name + " " + Stunden + ":" + Minuten + "" + Vorsek + Sekunden + ' </a></h4>';
+    document.getElementById("linkliste").innerHTML = document.getElementById("linkliste").innerHTML + '<h4 id=link' + countBubbles + '><a class="linkinLinklist" href="' + link + '" target="_blank">' + name + " " + Stunden + Vormin + Minuten + "" + Vorsek + Sekunden + ' </a></h4>';
 
 
 if(doScroll == 1){
