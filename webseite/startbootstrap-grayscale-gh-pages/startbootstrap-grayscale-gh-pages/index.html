@@ -29,12 +29,14 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="mehrajaxtest.css" />
-    <script type="text/javascript" src="xhrobjekt.js"></script>
-    <script type="text/javascript" src="axaxjson.js"></script>
+    <link rel="stylesheet" type="text/css" href="WebseiteBubblePrototyp/mehrajaxtest.css" />
+    <script type="text/javascript" src="WebseiteBubblePrototyp/xhrobjekt.js"></script>
+    <script type="text/javascript" src="WebseiteBubblePrototyp/axaxjson.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" >
 
     <!-- Intro Header -->
     <header class="intro">
@@ -53,31 +55,30 @@
         </div>
     </header>
 
-    <!-- About Section -->
+    <!-- Application Section -->
     <section id="about" class="container content-section text-center">
         <div id="kobora">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
 
                 <h1>GUI KoBoRa </h1>
-                <div id="bubbleContainer" class="bubbleContainer">
-                    <div id="innerBubbleContainer" class="bubbleContainer">
-                       
-                        <p> Applikation </p>
-
-                    </div>
-                </div>
-	        </div>
+                
+                <div id="content">
+	                <div id="bubbleContainer" class="bubbleContainer">
+	                    <div id="innerBubbleContainer">
+	                    <p>Text</p>
+						</div>
+	     	
+				     	<div id="linkliste" class="bubbleContainer">
+				     	<p>Text2</p>
+	        			</div>
+	                </div>
 	
-	        <div class="btn"> 
-	          
-	          	<button id="startButton"> Start </button>
-	        	<button id="stopButton"> Stop </button>
-	
-	        </div>
-           
-        </div>
-
+	                <button type="button" id="startButton" class="btn"> Start </button>
+		        	<button type="button" id="stopButton" class="btn"> Stop </button>
+				</div>
+            </div>
+	    </div>
         </div>
     </section>
 

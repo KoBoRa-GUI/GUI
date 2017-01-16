@@ -49,7 +49,7 @@ $randomMumber= rand(1, 9);
 
 
 
-$line_chart_data =  '{ "name":"'.$namearray[$randomMumber].'", "prio": '.rand(1, 10).', "color: "'.  $colorArray[$randomMumber].', "link":"'.$linkarray[$randomMumber].' "}';
+$line_chart_data =  '{ "name":"'.$namearray[$randomMumber].'", "prio": '.rand(5, 10).', "color: "'.  $colorArray[$randomMumber].', "link":"'.$linkarray[$randomMumber].' "}';
 
 
 $line_chart_data = json_encode($line_chart_data);

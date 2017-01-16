@@ -8,12 +8,11 @@ function erzXHRObject(){
             resObjekt = new ActiveXObject("MSXML2.XMLHTTP");
         } catch(Error){
             try{
-                
                 resObjekt = new XMLHttpRequest();
-            }catch(Error){
+            } catch(Error){
             alert("Steinzeit Browser!!!");
         }
         }
-}
+    }
 return resObjekt;
 }
