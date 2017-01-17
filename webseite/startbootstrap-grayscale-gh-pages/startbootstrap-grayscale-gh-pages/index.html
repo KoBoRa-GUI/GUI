@@ -29,9 +29,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="../../../WebseiteBubblePrototyp/mehrajaxtest.css" />
-    <script type="text/javascript" src="../../../WebseiteBubblePrototyp/xhrobjekt.js"></script>
-    <script type="text/javascript" src="../../../WebseiteBubblePrototyp/axaxjson.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mehrajaxtest.css" />
+    <script type="text/javascript" src="js/xhrobjekt.js"></script>
+    <script type="text/javascript" src="js/axaxjson.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
 
 </head>
@@ -44,7 +44,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">KoBoRa</h1>
+                        <h1 class="brand-heading">KOBORA</h1>
                         <p class="intro-text">Click here to start the free online collaboration tool.</p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -56,12 +56,29 @@
     </header>
 
     <!-- Application Section -->
-    <section id="about" class="container content-section text-center">
+	<section id="about" class="container content-section text-center">
+		<h1>KoBoRa </h1>
+		<button type="button" id="startButton" class="btn"> Start </button>
+		<button type="button" id="stopButton" class="btn"> Stop </button>
+		<h1></h1>
+
+		<div id="content">
+	        <div id="bubbleContainer" class="bubbleContainer">
+	            <div id="innerBubbleContainer">
+	            </div>	            
+	        </div>
+		</div>
+
+	</section>
+
+
+
+<!--   <section id="about" class="container content-section text-center">
         <div id="kobora">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
 
-                <h1>GUI KoBoRa </h1>
+                
                 
                 <div id="content">
 	                <div id="bubbleContainer" class="bubbleContainer">
@@ -74,14 +91,12 @@
 	        			</div>
 	                </div>
 	
-	                <button type="button" id="startButton" class="btn"> Start </button>
-		        	<button type="button" id="stopButton" class="btn"> Stop </button>
+	                
 				</div>
             </div>
 	    </div>
         </div>
-    </section>
-
+    </section> -->  
 
     <!-- Footer -->
     <footer>
