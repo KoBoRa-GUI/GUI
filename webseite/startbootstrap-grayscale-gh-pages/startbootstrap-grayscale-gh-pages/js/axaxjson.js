@@ -45,13 +45,16 @@ function drawBubble(daten) {
     var Vormin = (Minuten < 10) ? ":0" : ":";
 
     countBubbles++;
+    
+    //zufälliges margin für bubbles
+    var randomMargin = Math.random(1, 50) * 100 + '%';
 
     //erstelle bubbleRoom
-    var bubbleRoom = '<div class="bubbleRoom" id="bubbleRoom' + countBubbles + '" "> </div>';
+    var bubbleRoom = '<div class="bubbleRoom" id="bubbleRoom' + countBubbles + '" " "> </div>';
     //  var bubbleRoom = '<p> test </p>';
 
     //erstelle bubble
-    var bubble = '<div class="coloredBubble" id="coloredBubble' + countBubbles + '" style="width: ' + size + '; height: ' + size + '; background-color:' + color + '; "> <a id="bubble' + countBubbles + '" class="bubbleLink"  href="' + link + '" target="_blank">' + name + ' </a> </div>';
+    var bubble = '<div class="coloredBubble" id="coloredBubble' + countBubbles + '" style=" margin-top:'+randomMargin+'; width: ' + size + 'px; height: ' + size + 'px; background-color:' + color + '; "> <a id="bubble' + countBubbles + '" class="bubbleLink"  href="' + link + '" target="_blank">' + name + ' </a> </div>';
     //verlängere den Container
     document.getElementById("innerBubbleContainer").style.width = document.getElementById("innerBubbleContainer").offsetWidth + size + 150 + "px";
 
@@ -76,11 +79,12 @@ function drawBubble(daten) {
     }
 
     //background color der Links ergänzen
-    var randomPadding = Math.random(1, 50) * 100 + '% !important';
+ 
     document.getElementById('link' + countBubbles).style.color = "white";
     document.getElementById('link' + countBubbles).style.backgroundColor = color;
     document.getElementById('bubble' + countBubbles).style.backgroundColor = color;
     document.getElementById('bubbleRoom' + countBubbles).style.paddingTop = randomPadding;
+ //   document.getElementById('bubbleRoom3').style.paddingTop = randomPadding;
 }
 
 var doScroll = 1; 
