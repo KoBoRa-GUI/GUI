@@ -11,7 +11,7 @@
  * @date 2016-11-13"P"17:49
  */
 
-/** Core Fancytree module.
+/** Hauptklasse FancyTree.
  */
 
 
