@@ -53,6 +53,7 @@ function drawBubble(daten) {
     var bubbleRoom = '<div class="bubbleRoom" id="bubbleRoom' + countBubbles + '" " "> </div>';
     //  var bubbleRoom = '<p> test </p>';
 
+    
     //erstelle bubble
     var bubble = '<div class="coloredBubble" id="coloredBubble' + countBubbles + '" style=" margin-top:'+randomMargin+'; width: ' + size + 'px; height: ' + size + 'px; background-color:' + color + '; "> <a id="bubble' + countBubbles + '" class="bubbleLink"  href="' + link + '" target="_blank">' + name + ' </a> </div>';
     //verlängere den Container
