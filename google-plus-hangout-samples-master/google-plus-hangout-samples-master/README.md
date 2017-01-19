@@ -1,1 +1,0 @@
-# google-plus-hangout-samples
