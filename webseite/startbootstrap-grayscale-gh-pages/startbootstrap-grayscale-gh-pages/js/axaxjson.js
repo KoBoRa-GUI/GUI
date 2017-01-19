@@ -52,27 +52,28 @@ function drawBubble(daten) {
     //erstelle bubbleRoom
     var bubbleRoom = '<div class="bubbleRoom" id="bubbleRoom' + countBubbles + '" " "> </div>';
     //  var bubbleRoom = '<p> test </p>';
-
     
     //erstelle bubble
     var bubble = '<div class="coloredBubble" id="coloredBubble' + countBubbles + '" style=" margin-top:'+randomMargin+'; width: ' + size + 'px; height: ' + size + 'px; background-color:' + color + '; "> <a id="bubble' + countBubbles + '" class="bubbleLink"  href="' + link + '" target="_blank">' + name + ' </a> </div>';
+
     //verlängere den Container
     document.getElementById("innerBubbleContainer").style.width = document.getElementById("innerBubbleContainer").offsetWidth + size + 150 + "px";
 
     //füge bubbleRoom hinzu 
     document.getElementById("innerBubbleContainer").innerHTML = document.getElementById("innerBubbleContainer").innerHTML + bubbleRoom;
-    // füge Bubble dem Container hinzu
+
+    //füge Bubble dem Container hinzu
     document.getElementById('bubbleRoom' + countBubbles).innerHTML = bubble;
-    // füge Link zu Liste hinzu
-  //  document.getElementById("linkliste").innerHTML = document.getElementById("linkliste").innerHTML + '<h4 id=link' + countBubbles + '><a class="linkinLinklist" href="' + link + '" target="_blank">' + name + " " + Stunden + Vormin + Minuten + "" + Vorsek + Sekunden + ' </a></h4>';
 
+    //füge Link zu Liste hinzu
+    //document.getElementById("linkliste").innerHTML = document.getElementById("linkliste").innerHTML + '<h4 id=link' + countBubbles + '><a class="linkinLinklist" href="' + link + '" target="_blank">' + name + " " + Stunden + Vormin + Minuten + "" + Vorsek + Sekunden + ' </a></h4>';
 
+    
+    //Autoscroll
 	if(doScroll == 1){
-	
 	    //autoscroll des Bubblecontainers
 	    var elemBubble = document.getElementById("bubble" + countBubbles);
 	    elemBubble.scrollIntoView(true);
-	    //alert("scrolle zu: "+ "bubble" + countBubbles);
 	
 	    //autoscroll der Liste
 	    //var elemList = document.getElementById("link" + countBubbles);
@@ -80,12 +81,11 @@ function drawBubble(daten) {
     }
 
     //background color der Links ergänzen
- 
     document.getElementById('link' + countBubbles).style.color = "white";
     document.getElementById('link' + countBubbles).style.backgroundColor = color;
     document.getElementById('bubble' + countBubbles).style.backgroundColor = color;
     document.getElementById('bubbleRoom' + countBubbles).style.paddingTop = randomPadding;
- //   document.getElementById('bubbleRoom3').style.paddingTop = randomPadding;
+    //document.getElementById('bubbleRoom3').style.paddingTop = randomPadding;
 }
 
 var doScroll = 1; 
@@ -94,7 +94,7 @@ var myInterval;
 
 
 function starteAnwendung() {
-    myInterval = setInterval(sndReq, 300);
+    myInterval = setInterval(sndReq, 2500);
 }
 
 function stoppeAnwendung() {
@@ -103,18 +103,18 @@ function stoppeAnwendung() {
 
 
 function init() {
-    window.document.getElementById("content").onmouseover = function () {
-         doScroll = 0;
-     }
-     window.document.getElementById("content").onmouseleave = function () {
-         doScroll = 1;
-     }
+	window.document.getElementById("content").onmouseover = function () {
+        doScroll = 0;
+    }
+    window.document.getElementById("content").onmouseleave = function () {
+        doScroll = 1;
+    }
     window.document.getElementById("stopButton").onclick = function () {
     	stoppeAnwendung();
-     }
-     window.document.getElementById("startButton").onclick = function () {
-         starteAnwendung();
-         doScroll = 1;
+    }
+    window.document.getElementById("startButton").onclick = function () {
+        starteAnwendung();
+        doScroll = 1;
      }
 }
 

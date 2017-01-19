@@ -2,14 +2,14 @@
 .bubbleRoom{
     height: 350px;
     width: 200px;
-    border: 1px solid #00ff40;; 
+    border: 1px solid transparent; 
     float: left;
 }
 
 #content{
    height: 400px;
    width: 100%;
-   border: 1px solid red;
+   border: 1px solid transparent;
 }
 
 .bubbleContainer{
@@ -33,14 +33,15 @@
     float: left;
 }
 
-
-
 .coloredBubble{
     float: left;
     border-radius: 120px;
 	text-align:center;
-    margin-left: 30%;
-    /* margin-top: 30%; */
+	vertical-align: top;
+	
+    width: 3em
+    /*margin-left: 30%;*/
+    /*margin-top: 30%;*/
 }
 
 .bubbleLink{
