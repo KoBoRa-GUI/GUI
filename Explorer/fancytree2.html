@@ -22,10 +22,17 @@
     <script type="text/javascript">
         $(function(){
             // using default options
+           
+            var min = 1;
+          	var max = 3;
+          	
+          	var random = Math.floor(Math.random() * (max - min + 1)) + min;
+        //   alert( random);
+        
             $("#tree").fancytree({
                 checkbox: false,
                 source: {
-                    url: "exp/test.json"
+                    url: "exp/test"+random+".json"
                 }
             });
         });
