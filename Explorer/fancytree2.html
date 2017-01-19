@@ -20,12 +20,14 @@
         
         #dataList {
             border: 1px solid green;
+            overflow: scroll;
+            height: 200px;
         }
         
         .showDivs {
             width: 45%;
             float: left;
-            poss
+          
         }
     </style>
 
@@ -33,9 +35,12 @@
 </head>
 
 <body>
-    <div id="tree" data-source="ajax" class="showDivs">
-    </div>
-    <div id="dataList" class="showDivs"> dsda </div>
+    <button type="button" id="startButton" class="btn"> Start </button>
+<button type="button" id="stopButton" class="btn"> Stop </button>
+
+        <div id="dataList" class="showDivs"> dsda </div>
+    <div id="tree" data-source="ajax" class="showDivs"></div>
+
 
     <script type="text/javascript">
 
@@ -44,27 +49,44 @@
 
        function starteTree(){
             // using default options
+              
+           //   $('#tree').empty();
            
             var min = 1;
           	var max = 3;
           	
           	var random = Math.floor(Math.random() * (max - min + 1)) + min;
-        //   alert( random);
-        
+
+           
+            //  alert("fülle div");
             $("#tree").fancytree({
+            
                 checkbox: false,
                 source: {
-                    url: "exp/test"+random+".json"
+                    url: "exp/test"+1+".json"
                 }
-               
-            });
-              
-            ;
-        });
+            })
+/*
+alert("danach");
+
+$("#tree").empty();
+
+  $("#tree").fancytree({
+            
+                checkbox: false,
+                source: {
+                    url: "exp/test"+2+".json"
+                }
+            })
+
+*/
+
+            }
+
 
         function fillList(){
             
-        document.getElementById("dataList").innerHTML = document.getElementById("dataList").innerHTML + '<h4> lalalla</h4>';
+        document.getElementById("dataList").innerHTML = document.getElementById("dataList").innerHTML + '<h4> lalalla </h4> ';
 
         }
 
@@ -74,12 +96,12 @@
         function starteAnwendung(){
            // fillList();
             myInterval = setInterval(fillList, 3000);
-            myInterval2 = setInterval(starteTree, 3000);starteTree
+            myInterval2 = setInterval(starteTree, 3000);
         }
 
         
 function stoppeAnwendung() {
-    //alert("STOP THIS SHIT");
+  
     
     clearInterval(myInterval);
     clearInterval(myInterval2);
@@ -88,11 +110,11 @@ function stoppeAnwendung() {
             function init(){
                    
 
-                    window.document.getElementById("dataList").onmouseover = function () {
+                    window.document.getElementById("startButton").onclick = function () {
                         starteAnwendung();
 
                     }
-                window.document.getElementById("dataList").onmouseleave = function () {
+                window.document.getElementById("stopButton").onclick = function () {
                         stoppeAnwendung();
 
                     }
