@@ -37,18 +37,20 @@
     float: left;
     border-radius: 120px;
 	text-align:center;
-	vertical-align: top;
-	
-    width: 3em
+	vertical-align: top; 
     /*margin-left: 30%;*/
     /*margin-top: 30%;*/
 }
 
 .bubbleLink{
 	position: relative;
-	top: 40%;
 	color: white !important;
-	margin-left: -30%;
+	top: 40%;
+	width: 3em;
+	max-width: 5em;
+	word-wrap: break-word;
+	word-break: break-all;
+	/*margin-left: -30%;*/
 }
 
 /*#kobora{
