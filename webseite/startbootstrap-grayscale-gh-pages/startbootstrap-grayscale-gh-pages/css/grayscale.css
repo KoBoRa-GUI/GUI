@@ -179,7 +179,7 @@ a:focus {
   color: black;
   background-color: #011d32;
 }
-ul.banner-social-buttons {
+/*ul.banner-social-buttons {
   margin-top: 0;
 }
 @media (max-width: 1199px) {
@@ -197,6 +197,7 @@ ul.banner-social-buttons {
     margin-bottom: 0;
   }
 }
+*/
 /*#map {
   width: 100%;
   height: 200px;
