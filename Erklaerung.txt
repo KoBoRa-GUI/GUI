@@ -1,8 +1,8 @@
 
 
-Kurze Erklärung:
+Kurze Erklï¿½rung:
 
-Die Prototypen, die wir an der Präsentation gezeigt haben waren:
+Die Prototypen, die wir an der Prï¿½sentation gezeigt haben waren:
 
 App: test2.xml 
 Erweiterung (App am rechten Rand): test2Erweiterung.xml
@@ -16,3 +16,8 @@ Alle anderen xml files sind Zwischenschritte bzw die Muster von Google siehe:
 
 https://developers.google.com/+/hangouts/getting-started
 
+<<<<<<< HEAD
+=======
+
+tut bei Lisa tun!!!! markus auch tun eigner branch Hier noch ein test von jan mit master
+>>>>>>> refs/remotes/origin/Florian
