@@ -22,7 +22,7 @@
     height: 400px;
     width: 100%;
     overflow-x: auto;
-    white-space: nowrap;
+    white-space: inherit;
     float: left;
 }
 
@@ -48,7 +48,9 @@
 	position: relative;
 	top: 40%;
 	color: white !important;
-	margin-left: -30%;
+	max-width: 6px;
+	word-wrap: break-word;
+	word-break: break-all;
 }
 
 /*#kobora{
