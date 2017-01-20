@@ -14,6 +14,7 @@ $namearray = array (
 );
 
 
+
 $linkarray = array (
 "https://calendar.google.com/calendar/render??hl=de&pli=1#main_7%7Cmonth", 
 "https://docs.google.com/document/d/1GpQvmQHQxT2JunSAgikVFhw7dcFlLMmCgbikWV6Vvf0/edit",
@@ -42,7 +43,7 @@ $colorArray = array ("#F7CC0B",
 
 
 
-$randomMumber= rand(1, 9);
+$randomMumber= rand(0, 8);
 
 
 
