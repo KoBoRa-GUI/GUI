@@ -8,9 +8,10 @@ $namearray = array (
 "Projektdokumentation User Experience.docx",
 "ToDo-Liste.xlsx",
 "Pr√§sentation User Experience 21.11.16.pptx",
+"Explorer Prototyp",											//exp link
 "Explorer",
 "Beispiele",
-"Anforderungskatalog.xlsx"
+"Anforderungskatalog.xlsx",
 );
 
 
@@ -22,9 +23,12 @@ $linkarray = array (
 "https://docs.google.com/document/d/1R1VkvcuNqAgvH4NpReUMAcaNfdp92sxxK7GkR1rTMYc/edit#heading=h.gjdgxs",
 "https://docs.google.com/spreadsheets/d/1yvQaaoON5RaQHP-X64vRi5NHW7eZgXBm07IGbOvp1hU/edit#gid=0",
 "https://docs.google.com/presentation/d/15D33bCUltMJGjnlo2bmLP2YpY5zoJFtELeUf5qVLnxM/edit#slide=id.p4",
+"https://facebook.com",																						//exp link
 "https://drive.google.com/drive/folders/0B5DLVTqFPj3ZTjU0STcxX3c5RFE",		
 "https://drive.google.com/drive/folders/0B5DLVTqFPj3ZOHBNcmpYUjBhWGc",
-"https://docs.google.com/spreadsheets/d/14QGK4LAcajOP0HBXqT4_k7ArSibyWg0u_Gy0p7RbgHQ/edit"	
+"https://docs.google.com/spreadsheets/d/14QGK4LAcajOP0HBXqT4_k7ArSibyWg0u_Gy0p7RbgHQ/edit"
+
+		
 );
 
 
@@ -35,9 +39,11 @@ $colorArray = array ("#F7CC0B",
                      "#0404B4",
                      "#0B610B",
                      "#FF8000",
+					 "#F7CC0B",  //exp link
                      "#F7CC0B",
                      "#F7CC0B",
-                     "#0B610B"  
+                     "#0B610B"
+					 
 );
 
 
@@ -45,7 +51,7 @@ $colorArray = array ("#F7CC0B",
 $randomMumber= rand(0, 8);
 
 
-
+// sollen wir jedes 10 mal unseren explorer vorschlagen lassen, dass es sicher bei der pr‰si kommt?
 
 $line_chart_data =  '{ "name":"'.$namearray[$randomMumber].'", "prio": '.rand(5, 10).', "color: "'.  $colorArray[$randomMumber].', "link":"'.$linkarray[$randomMumber].' "}';
 
