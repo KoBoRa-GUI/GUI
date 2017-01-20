@@ -37,15 +37,12 @@ $colorArray = array ("#F7CC0B",
                      "#FF8000",
                      "#F7CC0B",
                      "#F7CC0B",
-                     "#0B6121"  
+                     "#0B610B"  
 );
 
 
 
-
 $randomMumber= rand(0, 8);
-
-
 
 
 

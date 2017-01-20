@@ -38,10 +38,6 @@
     border-radius: 120px;
 	text-align:center;
 	vertical-align: top;
-	
-    width: 3em
-    /*margin-left: 30%;*/
-    /*margin-top: 30%;*/
 }
 
 .bubbleLink{
@@ -50,7 +46,8 @@
 	color: white !important;
 	max-width: 6px;
 	word-wrap: break-word;
-	word-break: break-all;
+	word-break: initial;
+	hyphens: auto;
 }
 
 /*#kobora{
