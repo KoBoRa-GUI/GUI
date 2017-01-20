@@ -28,12 +28,13 @@ var bubbleIDarray = new Array();
 function drawBubble(daten) {
 
 	
+	
 	try {
 		daten = JSON.parse(resOb.responseText);
 	} catch (e) {
-		alert("problem");
-		alert(resOb.responseText);
-		stoppeAnwendung();
+		//alert("problem");
+	//	alert(resOb.responseText);
+	//	stoppeAnwendung();
 	}
     
     var datenString = daten.substring(1, daten.length - 1);

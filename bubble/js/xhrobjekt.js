@@ -8,6 +8,7 @@ function erzXHRObject(){
             resObjekt = new ActiveXObject("MSXML2.XMLHTTP");
         } catch(Error){
             try{
+            	
                 resObjekt = new XMLHttpRequest();
             } catch(Error){
             alert("Steinzeit Browser!!!");
