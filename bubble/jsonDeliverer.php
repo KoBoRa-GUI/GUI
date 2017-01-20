@@ -42,7 +42,7 @@ $colorArray = array ("#F7CC0B",
 
 
 
-$randomMumber= rand(1, 9);
+$randomMumber= rand(0, 8);
 
 
 

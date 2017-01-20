@@ -27,7 +27,15 @@ var bubbleIDarray = new Array();
 
 function drawBubble(daten) {
 
-    daten = JSON.parse(resOb.responseText);
+	
+	try {
+		daten = JSON.parse(resOb.responseText);
+	} catch (e) {
+		alert("problem");
+		alert(resOb.responseText);
+		stoppeAnwendung();
+	}
+    
     var datenString = daten.substring(1, daten.length - 1);
     var datenBubble = datenString.split(",");
     var name = datenBubble[0].substring(9, datenBubble[0].length - 1);
@@ -80,11 +88,12 @@ function drawBubble(daten) {
 	    //elemList.scrollIntoView(true);
     }
 
-    //background color der Links ergänzen
-    document.getElementById('link' + countBubbles).style.color = "white";
+    //background color der Links ergänzen war nur für die linklist wichtig 
+/*    document.getElementById('link' + countBubbles).style.color = "white";
     document.getElementById('link' + countBubbles).style.backgroundColor = color;
     document.getElementById('bubble' + countBubbles).style.backgroundColor = color;
     document.getElementById('bubbleRoom' + countBubbles).style.paddingTop = randomPadding;
+  */
     //document.getElementById('bubbleRoom3').style.paddingTop = randomPadding;
 }
 
