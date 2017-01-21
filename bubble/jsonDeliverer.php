@@ -51,7 +51,7 @@ $colorArray = array ("#F7CC0B",
 $randomNumber= rand(0, 8);
 
 
-// sollen wir jedes 10 mal unseren explorer vorschlagen lassen, dass es sicher bei der präsi kommt?
+
 
 $line_chart_data =  '{ "name":"'.$namearray[$randomNumber].'", "prio": '.rand(5, 10).', "color: "'.  $colorArray[$randomNumber].', "link":"'.$linkarray[$randomNumber].' "}';
 
