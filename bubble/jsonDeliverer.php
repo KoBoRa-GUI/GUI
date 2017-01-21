@@ -5,9 +5,9 @@ $namearray = array (
 "Kalender", 
 "User Stories Explorer.docx",
 "Notizen.docx",
-"Projektdokumentation User Experience.docx",
+"Projektdokumentation UX.docx",
 "ToDo-Liste.xlsx",
-"Präsentation User Experience 21.11.16.pptx",
+"Präsentation User Experience.pptx",
 "Explorer Prototyp",											//exp link
 "Explorer",
 "Beispiele",
