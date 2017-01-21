@@ -48,12 +48,12 @@ $colorArray = array ("#F7CC0B",
 
 
 
-$randomMumber= rand(0, 8);
+$randomNumber= rand(0, 8);
 
 
 // sollen wir jedes 10 mal unseren explorer vorschlagen lassen, dass es sicher bei der präsi kommt?
 
-$line_chart_data =  '{ "name":"'.$namearray[$randomMumber].'", "prio": '.rand(5, 10).', "color: "'.  $colorArray[$randomMumber].', "link":"'.$linkarray[$randomMumber].' "}';
+$line_chart_data =  '{ "name":"'.$namearray[$randomNumber].'", "prio": '.rand(5, 10).', "color: "'.  $colorArray[$randomNumber].', "link":"'.$linkarray[$randomNumber].' "}';
 
 
 $line_chart_data = json_encode($line_chart_data);
