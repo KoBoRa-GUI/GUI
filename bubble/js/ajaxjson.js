@@ -14,7 +14,7 @@ function sndReq() {
 
 //checkt ob der server im richtigen stadium ist (mit == 4) wenn ja wird draw() aufgerufen
 function handleResponse() {
-    //var daten = null;
+    var daten = null;
     if (resOb.readyState == 4) {
         drawBubble(daten);
     }
