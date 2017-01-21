@@ -1,5 +1,9 @@
+
+// erzeuge XMLHttpRequest - Objekt für ajax
 var resOb = erzXHRObject();
 
+
+// hohlt json vom deliverer und ruft handleResponse auf 
 function sndReq() {
     resOb.open('get', 'jsonDeliverer.php', true);
     resOb.onreadystatechange = function () {
@@ -8,27 +12,24 @@ function sndReq() {
     resOb.send(null);
 }
 
+//checkt ob der server im richtigen stadium ist (mit == 4) wenn ja wird draw() aufgerufen
 function handleResponse() {
-    var daten = null;
+    //var daten = null;
     if (resOb.readyState == 4) {
         drawBubble(daten);
     }
 }
 
-function out() {
-    for (i = 0; i < 3; i++) {
-        document.getElementById("info" + i).innerHTML = "";
-    }
-}
+
 
 var countBubbles = 0;
 var bubbleIDarray = new Array();
 
 
+// drawbubble parst die json daten und zerschneidet den String in die passenden Variablen. Danach erzeugt es die Bubbles, 
+//verpackt diese mit einem bubbleroom und fügt alles dem Anzeigebereich hinzu. 
+//Danach scrollt es die Anzeige zur neuesten bubble
 function drawBubble(daten) {
-
-	
-	
 	try {
 		daten = JSON.parse(resOb.responseText);
 	} catch (e) {
@@ -46,13 +47,13 @@ function drawBubble(daten) {
 
     //alert(link);
     var size = 15 * prio + 20;
-    var date = new Date();
+ /*   var date = new Date();
     var Stunden = date.getHours();
     var Minuten = date.getMinutes();
     var Sekunden = date.getSeconds();
     var Vorsek = (Sekunden < 10) ? ":0" : ":";
     var Vormin = (Minuten < 10) ? ":0" : ":";
-
+*/
     countBubbles++;
     
     //zufälliges margin für bubbles
@@ -111,7 +112,7 @@ function stoppeAnwendung() {
     clearInterval(myInterval);
 }
 
-
+//initalisiert beim laden der html seite alle Komponenten
 function init() {
 	window.document.getElementById("content").onmouseover = function () {
         doScroll = 0;
@@ -128,5 +129,5 @@ function init() {
      }
 }
 
-
+//initalisiert beim laden der html seite alle Komponenten
 window.onload = init;
