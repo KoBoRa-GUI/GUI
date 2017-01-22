@@ -12,7 +12,7 @@ function sndReq() {
     resOb.send(null);
 }
 
-//checkt ob der server im richtigen stadium ist (mit == 4) wenn ja wird draw() aufgerufen
+//überprüft ob der server im richtigen stadium ist (mit == 4) wenn ja wird draw() aufgerufen
 function handleResponse() {
     var daten = null;
     if (resOb.readyState == 4) {
@@ -21,21 +21,20 @@ function handleResponse() {
 }
 
 
-
 var countBubbles = 0;
 var bubbleIDarray = new Array();
 
 
-// drawbubble parst die json daten und zerschneidet den String in die passenden Variablen. Danach erzeugt es die Bubbles, 
+//drawbubble parst die json daten und zerschneidet den String in die passenden Variablen. Danach erzeugt es die Bubbles, 
 //verpackt diese mit einem bubbleroom und fügt alles dem Anzeigebereich hinzu. 
 //Danach scrollt es die Anzeige zur neuesten bubble
 function drawBubble(daten) {
 	try {
 		daten = JSON.parse(resOb.responseText);
 	} catch (e) {
-		//alert("problem");
-	//	alert(resOb.responseText);
-	//	stoppeAnwendung();
+	//alert("problem");
+	//alert(resOb.responseText);
+	//stoppeAnwendung();
 	}
     
     var datenString = daten.substring(1, daten.length - 1);
@@ -47,7 +46,7 @@ function drawBubble(daten) {
 
     //alert(link);
     var size = 15 * prio + 20;
- /*   var date = new Date();
+/*  var date = new Date();
     var Stunden = date.getHours();
     var Minuten = date.getMinutes();
     var Sekunden = date.getSeconds();
@@ -91,18 +90,16 @@ function drawBubble(daten) {
     }
 
     //background color der Links ergänzen war nur für die linklist wichtig 
-//	document.getElementById('link' + countBubbles).style.color = "white";
-//    document.getElementById('link' + countBubbles).style.backgroundColor = color;
-//    document.getElementById('bubble' + countBubbles).style.backgroundColor = color;
-//    document.getElementById('bubbleRoom' + countBubbles).style.paddingTop = randomPadding;
+//	  	document.getElementById('link' + countBubbles).style.color = "white";
+//    	document.getElementById('link' + countBubbles).style.backgroundColor = color;
+//    	document.getElementById('bubble' + countBubbles).style.backgroundColor = color;
+//    	document.getElementById('bubbleRoom' + countBubbles).style.paddingTop = randomPadding;
 //  
-    //document.getElementById('bubbleRoom3').style.paddingTop = randomPadding;
+//	  	document.getElementById('bubbleRoom3').style.paddingTop = randomPadding;
 }
 
 var doScroll = 1; 
-
 var myInterval;
-
 
 function starteAnwendung() {
     myInterval = setInterval(sndReq, 2500);
@@ -112,7 +109,7 @@ function stoppeAnwendung() {
     clearInterval(myInterval);
 }
 
-//initalisiert beim laden der html seite alle Komponenten
+//initalisiert beim Laden der html seite alle Komponenten
 function init() {
 	window.document.getElementById("content").onmouseover = function () {
         doScroll = 0;
