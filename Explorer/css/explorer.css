@@ -34,3 +34,15 @@
    width: 100%;
    border: 1px solid transparent;
 }
+a{
+	color: white;
+}
+.fancytree-title{
+
+	color: white !important;
+}
+
+#headlineHistory{
+	align-self: center;
+	width: 250%;
+}
