@@ -179,6 +179,15 @@ a:focus {
   color: #011d32;
   background-color: #011d32;
 }
+#driveButton{
+	float: right;
+	margin-right: 3px;
+}
+
+#calendarButton{
+	float: right;
+	margin-right: 3px;
+}
 footer {
   padding: 50px 0;
 }
