@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>KoBoRa Explorer</title>
     <!-- Include jQuery and jQuery UI -->
     <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -12,6 +12,27 @@
     <script src="fancytree/jquery.fancytree-all.min.js"></script>
     <!-- Initialize the tree when page is loaded -->
 
+	<!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="js/xhrobjekt.js"></script>
+    <script type="text/javascript" src="js/ajaxjson.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 
     <style type="text/css">
         .highlight {
@@ -19,15 +40,30 @@
         }
         
         #dataList {
-            border: 1px solid green;
+        	
+        	margin: 25px;
+        	float: right;
             overflow: scroll;
-            height: 400px;
+            height: 250px;
+        }
+        #tree {
+        	margin: 25px;
+        	
+        	float: left;
+            overflow: scroll;
+            height: 250px;
         }
         
         .showDivs {
             width: 45%;
-            float: left;
+            
           
+        }
+        #tree_container{
+        
+        border: 1px solid green;
+        width: 100%;
+        height: 300px;
         }
     </style>
 
@@ -35,20 +71,37 @@
 </head>
 
 <body>
-    <button type="button" id="startButton" class="btn"> Start </button>
-<button type="button" id="stopButton" class="btn"> Stop </button>
 
+<!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">KOBORA-Explorer</h1>
+                        <p class="intro-text">Click here to start the free online collaboration tool.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<center>
+<div id="divButton">
+<button type="button" id="startButton" class="btn"> Start </button>
+<button type="button" id="stopButton" class="btn"> Stop </button>
+</div>
+</center>   
 
 <div id="tree_container">
-        <div id="dataList" class="showDivs">  </div>
+    <div id="dataList" class="showDivs">  </div>
     <div id="tree" data-source="ajax" class="showDivs"></div>
 </div>
 
     <script type="text/javascript">
-
-
-
-
 
        function starteTree(){
                             
@@ -65,14 +118,8 @@
                     cache: false
                 }
             })
-
-
-
             }
 
-
-
-      
         function starteNewTree(){
 
             $("#tree").remove();
@@ -81,13 +128,9 @@
         }
 
 
-
-
         function fillList(){
 
-    
-
-       var link = document.getElementById("highlight");
+       	var link = document.getElementById("highlight");
         var linkName =    document.getElementById("highlight").innerHTML;
 
         document.getElementById("dataList").innerHTML = document.getElementById("dataList").innerHTML + "<a  href="+ link +" target='_blank'> "+ linkName +" </a><br>";
@@ -126,6 +169,14 @@ function stoppeAnwendung() {
             }
         window.onload = init;
     </script>
+    
+        <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Media University Stuttgart 2017</p>
+        </div>
+    </footer>
+    
 </body>
 
 </html>
