@@ -19,13 +19,13 @@
  * Container and UL / LI
  *----------------------------------------------------------------------------*/
 ul.fancytree-container {
-  font-family: tahoma, arial, helvetica;
-  font-size: 10pt;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
   white-space: nowrap;
   padding: 3px;
   margin: 0;
-  background-color: white;
-  border: 1px dotted gray;
+  background-color: transparent;
+  border: 1px transparent;
   overflow: auto;
   min-height: 0%;
   position: relative;
@@ -327,7 +327,9 @@ span.fancytree-node {
   min-height: 20px;
 }
 span.fancytree-title {
-  color: black;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #42dca3;
   cursor: pointer;
   display: inline-block;
   vertical-align: top;

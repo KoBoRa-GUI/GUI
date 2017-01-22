@@ -1,0 +1,36 @@
+.highlight {
+	/*background-color: #f0e23c;*/
+	font-weight: bold;
+	border-color: #1d9b6c;
+	border-width: 2px;
+	border-style: solid;
+}
+	        
+#dataList {
+	border: 6px solid #c0c0c0;
+	height: 400px;
+	width: 50%;
+	overflow-x: auto;
+	white-space: inherit;
+	float: right;
+}
+	        
+.showDivs {
+	width: 40%;
+	float: center;
+}
+
+#tree_container{
+    border: 6px solid #c0c0c0;
+    height: 400px;
+    width: 50%;
+    overflow-x: auto;
+    white-space: inherit;
+    float: left;
+}
+
+#content{
+   height: 400px;
+   width: 100%;
+   border: 1px solid transparent;
+}
