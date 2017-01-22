@@ -76,9 +76,16 @@
         }
         function fillList(){
     
-       var link = document.getElementById("highlight");
-        var linkName =    document.getElementById("highlight").innerHTML;
-        document.getElementById("dataList").innerHTML = document.getElementById("dataList").innerHTML + "<a  href="+ link +" target='_blank'> "+ linkName +" </a><br>";
+        var linkArray = document.getElementsByClassName("highlight");
+     
+           for(var i = 0; i < linkArray.length; i++ ){
+
+
+               var link = linkArray[i];
+               var linkName =   linkArray[i].innerHTML; 
+               document.getElementById("dataList").innerHTML = document.getElementById("dataList").innerHTML + "<a  href="+ link +" target='_blank'> "+ linkName +" </a><br>";
+
+           }
         }
         var myInterval;
         var myInterval2;

@@ -11,7 +11,8 @@
 								{"title": "<a href='https://docs.google.com/document/d/1GjML6sIJUQL_6AqiyWTCyT9-s8za4H7n0FYnmn38kVs/edit'  target='_blank'> protokoll</a>"}
 						]},
 						{"title": "<a href='https://drive.google.com/drive/folders/0B8cdzV78DhAdUmVjcU5xNzZWR1U' target='_blank'> Admin</a>", "folder": true, "expanded": true,"children": [
-								{"title": "<a  id='highlight' href='https://docs.google.com/document/d/1M12wYEOv4Z_6nlicGR6gMrEWvczxFfsAVS8WsVTq1iY/edit' class='highlight' target='_blank'> Anleitung</a>"}
+								{"title": "<a  href='https://docs.google.com/document/d/1M12wYEOv4Z_6nlicGR6gMrEWvczxFfsAVS8WsVTq1iY/edit' class='highlight' target='_blank'> Anleitung</a>"},
+								{"title": "<a  href='https://docs.google.com/document/d/1M12wYEOv4Z_6nlicGR6gMrEWvczxFfsAVS8WsVTq1iY/edit' class='highlight' target='_blank'> Anleitung2</a>"}
 						]}
 				]}
 	
