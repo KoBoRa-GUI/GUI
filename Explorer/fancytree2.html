@@ -2,97 +2,116 @@
 <html lang="de">
 
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-    <title>KoBoRa</title>
-    
-    
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- Theme CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/explorer.css" />
-     
+    <meta charset="UTF-8">
+    <title>Title</title>
     <!-- Include jQuery and jQuery UI -->
     <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-
     <!-- Include Fancytree skin and library -->
-    <link href="fancytree/skin-win8/ui.fancytree.css" rel="stylesheet">
+    <link href="fancytree/skin-win8/ui.fancytree.min.css" rel="stylesheet">
     <script src="fancytree/jquery.fancytree-all.min.js"></script>
-
     <!-- Initialize the tree when page is loaded -->
-	<script type="text/javascript" src="js/explorerjson.js"></script>
-	
+
+
+    <style type="text/css">
+        .highlight {
+            background-color: #2EFE2E;
+        }
+        
+        #dataList {
+            border: 1px solid green;
+            overflow: scroll;
+            height: 400px;
+        }
+        
+        .showDivs {
+            width: 40%;
+            float: left;
+          
+        }
+        #tree_container{
+        width: 40%;
+        border: 1px solid red;
+        height: 400px;
+        
+        }
+    </style>
+
+
 </head>
 
-<body id="page-top" data-spy="scroll" >
+<body>
+    <button type="button" id="startButton" class="btn"> Start </button>
+<button type="button" id="stopButton" class="btn"> Stop </button>
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">KOBORA</h1>
-                        <p class="intro-text">Click here to start the free online collaboration tool.</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+<div id="anzeigebereich">
+<div id="tree_container">
 
-   <!-- Application Section -->
-	<section id="about" class="container content-section text-center">
-		<h1>KoBoRa </h1>
-		
-		<div class="row">
-			<button type="button" id="startButton" class="btn"> Start </button>
-			<button type="button" id="stopButton" class="btn"> Stop </button>
-		</div>
-		
-		<div class="row">
-			<a href="https://drive.google.com" title="Drive" target="_blank">
-				<input id="driveButton" type="button" class="btn" value="Drive"  />
-			</a>
-			<a href="https://calendar.google.com/" title="Calendar" target="_blank">
-				<input id="calendarButton" type="button" class="btn" value="Calendar"  />
-			</a>
-		</div>	
-		
-		<div class="row">
-			<div id="content">
-				<div id="tree_container">
-    				<div data-source="ajax" class="showDivs"></div>   				
-				</div>
-				<div id="dataList">
-					<div class="showDivs"></div>
-				</div>						
-			</div>
-		</div>
-	</section>
+    <div id="tree" data-source="ajax" class="showDivs"></div>
+           
+</div>
+ <div id="dataList" class="showDivs">  </div>
+</div>
+    <script type="text/javascript">
+       function starteTree(){
+                            
+            var min = 1;
+          	var max = 3;
+          	
+          	var random = Math.floor(Math.random() * (max - min + 1)) + min;
+            $("#tree").fancytree({
+            
+                checkbox: false,
+                source: {
+                    url: "exp/test"+random+".json",
+                    cache: false
+                }
+            })
+            }
+      
+        function starteNewTree(){
+            $("#tree").remove();
+            $("#tree_container").append('<div id="tree" data-source="ajax" class="showDivs"></div>');
+            starteTree();
+        }
+        function fillList(){
+    
+        var linkArray = document.getElementsByClassName("highlight");
+     
+           for(var i = 0; i < linkArray.length; i++ ){
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Media University Stuttgart 2017</p>
-        </div>
-    </footer>
 
+               var link = linkArray[i];
+               var linkName =   linkArray[i].innerHTML; 
+               document.getElementById("dataList").innerHTML = document.getElementById("dataList").innerHTML + "<a  href="+ link +" target='_blank'> "+ linkName +" </a><br>";
+
+           }
+        }
+        var myInterval;
+        var myInterval2;
+        function starteAnwendung(){
+           // fillList();
+            myInterval = setInterval(fillList, 3000);
+            myInterval2 = setInterval(starteNewTree, 3000);
+        }
+        
+function stoppeAnwendung() {
+  
+    
+    clearInterval(myInterval);
+    clearInterval(myInterval2);
+}
+            function init(){
+                   
+                    window.document.getElementById("startButton").onclick = function () {
+                        starteAnwendung();
+                    }
+                window.document.getElementById("stopButton").onclick = function () {
+                        stoppeAnwendung();
+                    }
+            }
+        window.onload = init;
+    </script>
 </body>
 
 </html>

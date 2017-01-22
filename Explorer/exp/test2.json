@@ -4,7 +4,7 @@
 		{"title": "<a href='https://drive.google.com/drive/folders/0B8cdzV78DhAdOWlfTEFTaWsyd1U' target='_blank'> Explorer dummy</a>", "expanded": true, "folder": true,"children": [
 				
 						{"title": "<a href='https://drive.google.com/drive/folders/0B8cdzV78DhAddU5mWmdnZkZSTTA' target='_blank'> Tools</a>", "folder": true,"expanded": true, "children": [
-								{"title": "<a  id='highlight' href='https://docs.google.com/document/d/1zXOVsU6pjd8VKlFv6CeSACDmgL7EyAcV-91JV8dBJKA/edit' class='highlight' target='_blank'> Beschreibung</a>"}
+								{"title": "<a   href='https://docs.google.com/document/d/1zXOVsU6pjd8VKlFv6CeSACDmgL7EyAcV-91JV8dBJKA/edit' class='highlight' target='_blank'> Beschreibung</a>"}
 						
 						]},
 						{"title": "<a href='https://drive.google.com/drive/folders/0B8cdzV78DhAdRzhWSHlubU5oU0E'  target='_blank'> Protokolle</a>", "folder": true,"children": [
