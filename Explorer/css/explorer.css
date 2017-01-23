@@ -9,7 +9,7 @@
 	        
 #dataList {
 	border: 6px solid #c0c0c0;
-	height: 200px;
+	height: 250px;
 	width: 50%;
 	overflow-x: auto;
 	white-space: inherit;
@@ -23,7 +23,7 @@
 
 #tree_container{
     border: 6px solid #c0c0c0;
-    height: 200px;
+    height: 250px;
     width: 50%;
     overflow-x: auto;
     white-space: inherit;
@@ -31,7 +31,7 @@
 }
 
 #content{
-   height: 200px;
+   height: 250px;
    width: 100%;
    border: 1px solid transparent;
 }
@@ -46,4 +46,12 @@ a{
 #headlineHistory{
 	align-self: center;
 	width: 250%;
+}
+
+.highlight{
+	font-weight: bold;
+	border-color: #1d9b6c;
+	border-width: 2px;
+	border-style: solid;
+	
 }
